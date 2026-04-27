@@ -56,7 +56,7 @@ The application is structured to be deployed easily on Vercel as two separate pr
    - Ensure the **Build Command** is empty or set to `echo "no build"`.
 4. Open **Environment Variables** and add your backend secrets from your `.env` file (`MONGO_URI`, `JWT_SECRET`, `STRIPE_SECRET_KEY`, etc.).
 5. Click **Deploy**.
-6. Once deployed, copy the backend URL (e.g., `https://doneshop-backend.vercel.app`).
+6. Once deployed, copy the backend URL (e.g., `[doneshop-ecommerce-website](https://doneshop-ecommerce-website.vercel.app/)`).
 
 ### 2. Deploying the Frontend
 1. Go back to your Vercel Dashboard and click **Add New... > Project**.
@@ -65,13 +65,13 @@ The application is structured to be deployed easily on Vercel as two separate pr
    - Expand **Root Directory** and select `frontend`.
    - Set **Framework Preset** to `Vite`.
 4. Open **Environment Variables** and add:
-   - `VITE_API_URL`: Your deployed backend URL + `/api` (e.g., `https://doneshop-backend.vercel.app/api`).
+   - `VITE_API_URL`: Your deployed backend URL + `/api` (e.g., `(https://doneshop-ecommerce-website.vercel.app/api`).
 5. Click **Deploy**.
-6. Once the frontend is deployed, copy the frontend URL (e.g., `https://doneshop.vercel.app`).
+6. Once the frontend is deployed, copy the frontend URL (e.g., `(https://doneshop-ecommerce-website.vercel.app)`).
 
 ### 3. Final Integration
 1. Go back to your **Backend Project** settings on Vercel.
 2. In **Environment Variables**, add a new variable called `FRONTEND_URL`.
-3. Set its value to your deployed frontend URL (e.g., `https://doneshop.vercel.app`).
+3. Set its value to your deployed frontend URL (e.g., `(https://doneshop-ecommerce-website.vercel.app/)`).
 4. Redeploy the backend so the updated CORS configuration takes effect.
 5. You're done! Your application should now be live and fully functional.
