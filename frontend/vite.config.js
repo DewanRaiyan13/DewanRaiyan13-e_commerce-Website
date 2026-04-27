@@ -5,10 +5,19 @@ export default defineConfig({
     target: 'esnext',
     rollupOptions: {
       output: {
-        manualChunks: {
-          vendor: ['react', 'react-dom', 'react-router-dom'],
-          ui: ['framer-motion', 'react-icons'],
-          utils: ['axios', 'yup', 'react-hook-form']
+        manualChunks(id) {
+          if (id.includes('node_modules')) {
+            if (id.includes('react') || id.includes('react-router-dom')) {
+              return 'vendor';
+            }
+            if (id.includes('framer-motion') || id.includes('react-icons')) {
+              return 'ui';
+            }
+            if (id.includes('axios') || id.includes('yup') || id.includes('react-hook-form')) {
+              return 'utils';
+            }
+            return 'vendor-other';
+          }
         }
       }
     }
