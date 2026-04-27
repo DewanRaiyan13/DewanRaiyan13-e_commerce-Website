@@ -1,0 +1,17 @@
+.orders-page { min-height: 100vh; padding-bottom: var(--sp-16); }
+.orders-title { font-family: var(--font-display); font-size: var(--fs-4xl); font-weight: 800; background: var(--gradient-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; padding: var(--sp-8) 0 var(--sp-6); }
+.orders-empty { text-align: center; padding: var(--sp-24) var(--sp-8); display: flex; flex-direction: column; align-items: center; gap: var(--sp-4); }
+.orders-empty h2 { font-size: var(--fs-2xl); }
+.orders-empty p { color: var(--clr-text-2); }
+.orders-list { display: flex; flex-direction: column; gap: var(--sp-4); }
+.order-card { padding: var(--sp-5); }
+.order-card__header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: var(--sp-4); }
+.order-card__id { font-weight: 700; margin-bottom: 2px; font-family: monospace; }
+.order-card__date { font-size: var(--fs-xs); color: var(--clr-text-3); }
+.order-card__items { display: flex; gap: var(--sp-2); margin-bottom: var(--sp-4); }
+.order-card__thumb { width: 56px; height: 56px; object-fit: cover; border-radius: var(--r-md); border: 2px solid var(--clr-border); }
+.order-card__more { width: 56px; height: 56px; border-radius: var(--r-md); background: var(--clr-surface); border: 2px solid var(--clr-border); display: flex; align-items: center; justify-content: center; font-size: var(--fs-xs); font-weight: 700; color: var(--clr-text-3); }
+.order-card__footer { display: flex; align-items: center; justify-content: space-between; padding-top: var(--sp-4); border-top: 1px solid var(--clr-border); }
+.order-card__total { font-size: var(--fs-xl); font-weight: 800; }
+.order-card__count { font-size: var(--fs-xs); color: var(--clr-text-3); }
+
